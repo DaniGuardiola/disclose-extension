@@ -1,0 +1,22 @@
+{
+  "name": "Disclose",
+  "version": "1.0",
+  "description": "Proximity voice chat for Discord",
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "src/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": [
+        "https://discord.com/channels/*"
+      ],
+      "js": [
+        "src/content_script.js"
+      ]
+    }
+  ]
+}
